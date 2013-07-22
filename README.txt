@@ -15,8 +15,8 @@ To run PeptideTMM type the following into your command line:
 ```
 java -jar PeptideTMM.jar -in inFile -up uniprot1.dat.gz [uniprot2.dat.gz ...] > outFile
 ```
-inFile: a ProteinProphet file (e.g: interact.prot.xml | interact.prot.xls)
-outFile: target file (e.g: interact.prot.tmAnalysis.tsv)
+* inFile: a ProteinProphet file (e.g: interact.prot.xml | interact.prot.xls)
+* outFile: target file (e.g: interact.prot.tmAnalysis.tsv)
 
 ### Output
 For a `pep.xml` file input, PeptideTMM will generate a tab-separated file (open using Excel) with the following columns:
