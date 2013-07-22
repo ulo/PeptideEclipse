@@ -3,7 +3,9 @@ PeptideTMM allows you to map your proteomics peptide identifications to transmem
 
 ### Input
 First, download the corresponding UniProt Knowledgebase packages from their FTP server:
+
 ftp://ftp.uniprot.org/pub/databases/uniprot/current_release/knowledgebase/taxonomic_divisions/
+
 Note: you do not have to unzip the files!
 
 Then just provide the ProteinProphet output, either the complete prot.xml file or a filtered and exported prot.xls file.
@@ -55,8 +57,8 @@ $ protein_AA_transmem_covered	length of protein's TM region(s) covered by peptid
 ### Dependencies
 All dependencies are packed within the PeptideTMM.jar file. No external dependencies are needed!
 Internally, PeptideTMM depends on two libraries:
-Apache Commons CLI: http://commons.apache.org/proper/commons-cli/
-Google Guava: http://code.google.com/p/guava-libraries/
+* Apache Commons CLI: http://commons.apache.org/proper/commons-cli/
+* Google Guava: http://code.google.com/p/guava-libraries/
 
 ### Credits
 PeptideTMM was developed by Ulrich Omasits, and will be published as part of a proteomics study.
