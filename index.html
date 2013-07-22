@@ -32,36 +32,92 @@
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
         <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
+<a name="welcome-to-peptidetmm" class="anchor" href="#welcome-to-peptidetmm"><span class="octicon octicon-link"></span></a>Welcome to PeptideTMM</h3>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+<p>PeptideTMM allows you to map your proteomics peptide identifications to transmembrane regions as annotated in UniProt.</p>
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
+<h3>
+<a name="input" class="anchor" href="#input"><span class="octicon octicon-link"></span></a>Input</h3>
+
+<p>First, download the corresponding UniProt Knowledgebase packages from their FTP server:</p>
+
+<p><a>ftp://ftp.uniprot.org/pub/databases/uniprot/current_release/knowledgebase/taxonomic_divisions/</a></p>
+
+<p>Note: you do not have to unzip the files!</p>
+
+<p>Then just provide the ProteinProphet output, either the complete prot.xml file or a filtered and exported prot.xls file.</p>
+
+<h3>
+<a name="command" class="anchor" href="#command"><span class="octicon octicon-link"></span></a>Command</h3>
+
+<p>To run PeptideTMM type the following into your command line:</p>
+
+<pre><code>$ java -jar PeptideTMM.jar -in inFile -up uniprot1.dat.gz [uniprot2.dat.gz ...] &gt; outFile
 </code></pre>
 
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+<p>inFile: a ProteinProphet file (e.g: interact.prot.xml | interact.prot.xls)
+outFile: target file (e.g: interact.prot.tmAnalysis.tsv)</p>
 
 <h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
+<a name="output" class="anchor" href="#output"><span class="octicon octicon-link"></span></a>Output</h3>
 
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
+<p>For a pep.xml file input, PeptideTMM will generate a tab-separated file (open using Excel) with the following columns:</p>
+
+<pre><code>$ group_number  protein-group number
+$ group_probability protein-group probability
+$ protein_name  name of first protein
+$ protein_peptides  number of peptides
+$ protein_pct_spectrum_ids  percent of total spectral counts
+$ protein_percent_coverage  percent of protein sequence coverage
+$ peptide_sequence  stripped peptide sequence
+$ peptide_sequence_modified modified peptide sequence
+$ peptide_charge    peptide charge state
+$ peptide_nsp_adjusted_probability  peptide probability
+$ peptide_n_enzymatic_termini   number of proteolytic termini
+$ peptide_calc_neutral_pep_mass neutral theoretical peptide mass
+$ proteinID matching UniProt ID
+$ protein_transmemRegions   UniProt transmembrane domain count
+$ protein_AA    length of protein
+$ protein_AA_covered    length of protein covered by peptides
+$ protein_AA_transmem   length of protein's TM region(s)
+$ protein_AA_transmem_covered   length of protein's TM region(s) covered by peptides
+$ peptide_AA    length of peptide
+$ peptide_AA_transmem   length of peptide's TM region(s)
+</code></pre>
+
+<p>For a pep.xls file input, PeptideTMM will create a copy of the input file with the following columns appended:</p>
+
+<pre><code>$ peptide_AA    length of peptide
+$ peptide_AA_transmem   length of peptide's TM region(s)
+$ proteinID matching UniProt ID
+$ protein_transmemRegions   UniProt transmembrane domain count
+$ protein_AA    length of protein
+$ protein_AA_covered    length of protein covered by peptides
+$ protein_AA_transmem   length of protein's TM region(s)
+$ protein_AA_transmem_covered   length of protein's TM region(s) covered by peptides
+</code></pre>
 
 <h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
+<a name="dependencies" class="anchor" href="#dependencies"><span class="octicon octicon-link"></span></a>Dependencies</h3>
 
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+<p>All dependencies are packed within the PeptideTMM.jar file. No external dependencies are needed!
+Internally, PeptideTMM depends on two libraries:</p>
+
+<ul>
+<li>Apache Commons CLI: <a href="http://commons.apache.org/proper/commons-cli/">http://commons.apache.org/proper/commons-cli/</a>
+</li>
+<li>Google Guava: <a href="http://code.google.com/p/guava-libraries/">http://code.google.com/p/guava-libraries/</a>
+</li>
+</ul><h3>
+<a name="credits" class="anchor" href="#credits"><span class="octicon octicon-link"></span></a>Credits</h3>
+
+<p>PeptideTMM was developed by Ulrich Omasits, and will be published as part of a proteomics study.
+Please cite xxx.</p>
 
 <h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
+<a name="license" class="anchor" href="#license"><span class="octicon octicon-link"></span></a>License</h3>
 
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
+<p>PeptideTMM is licensed under a Creative Commons Attribution 3.0 Unported License.</p>
       </section>
     </div>
 
