@@ -19,7 +19,7 @@ java -jar PeptideTMM.jar -in inFile -up uniprot1.dat.gz [uniprot2.dat.gz ...] > 
 * outFile: target file (e.g: interact.prot.tmAnalysis.tsv)
 
 ### Output
-For a `pep.xml` file input, PeptideTMM will generate a tab-separated file (open using Excel) with the following columns:
+For a `prot.xml` file input, PeptideTMM will generate a tab-separated file (open using Excel) with the following columns:
 ```
 group_number	protein-group number
 group_probability	protein-group probability
@@ -42,7 +42,7 @@ protein_AA_transmem_covered	length of protein's TM region(s) covered by peptides
 peptide_AA	length of peptide
 peptide_AA_transmem	length of peptide's TM region(s)
 ```
-For a `pep.xls` file input, PeptideTMM will create a copy of the input file with the following columns appended:
+For a `prot.xls` file input, PeptideTMM will create a copy of the input file with the following columns appended:
 ```
 peptide_AA	length of peptide
 peptide_AA_transmem	length of peptide's TM region(s)
