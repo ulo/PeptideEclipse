@@ -2,6 +2,8 @@
 PeptideEclipse allows you to map your proteomics peptide identifications to transmembrane regions as annotated in UniProt, 
 and thus showing which peptides were completely or partially hidden within the lipid bilayer.
 
+Homepage: http://ulo.github.io/PeptideEclipse/
+
 ### Input
 First, download the corresponding UniProt Knowledgebase packages from their FTP server:
 
