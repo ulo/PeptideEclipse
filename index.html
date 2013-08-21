@@ -4,11 +4,11 @@
   <head>
     <meta charset='utf-8' />
     <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="PeptideTMM : Map your peptide identifications to UniProt transmembrane regions!" />
+    <meta name="description" content="PeptideEclipse : Map your peptide identifications to UniProt transmembrane regions!" />
 
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 
-    <title>PeptideTMM</title>
+    <title>PeptideEclipse</title>
   </head>
 
   <body>
@@ -16,14 +16,14 @@
     <!-- HEADER -->
     <div id="header_wrap" class="outer">
         <header class="inner">
-          <a id="forkme_banner" href="https://github.com/ulo/PeptideTMM">View on GitHub</a>
+          <a id="forkme_banner" href="https://github.com/ulo/PeptideEclipse">View on GitHub</a>
 
-          <h1 id="project_title">PeptideTMM</h1>
+          <h1 id="project_title">PeptideEclipse</h1>
           <h2 id="project_tagline">Map your peptide identifications to UniProt transmembrane regions!</h2>
 
             <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/ulo/PeptideTMM/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/ulo/PeptideTMM/tarball/master">Download this project as a tar.gz file</a>
+              <a class="zip_download_link" href="https://github.com/ulo/PeptideEclipse/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/ulo/PeptideEclipse/tarball/master">Download this project as a tar.gz file</a>
             </section>
         </header>
     </div>
@@ -32,9 +32,12 @@
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
         <h3>
-<a name="welcome-to-peptidetmm" class="anchor" href="#welcome-to-peptidetmm"><span class="octicon octicon-link"></span></a>Welcome to PeptideTMM</h3>
+<a name="welcome-to-peptideeclipse" class="anchor" href="#welcome-to-peptideeclipse"><span class="octicon octicon-link"></span></a>Welcome to PeptideEclipse</h3>
 
-<p>PeptideTMM allows you to map your proteomics peptide identifications to transmembrane regions as annotated in UniProt.</p>
+<p>PeptideEclipse allows you to map your proteomics peptide identifications to transmembrane regions as annotated in UniProt, 
+and thus showing which peptides were completely or partially hidden within the lipid bilayer.</p>
+
+<p>Homepage: <a href="http://ulo.github.io/PeptideEclipse/">http://ulo.github.io/PeptideEclipse/</a></p>
 
 <h3>
 <a name="input" class="anchor" href="#input"><span class="octicon octicon-link"></span></a>Input</h3>
@@ -50,9 +53,9 @@
 <h3>
 <a name="command" class="anchor" href="#command"><span class="octicon octicon-link"></span></a>Command</h3>
 
-<p>To run PeptideTMM type the following into your command line:</p>
+<p>To run PeptideEclipse type the following into your command line:</p>
 
-<pre><code>java -jar PeptideTMM.jar -in inFile -up uniprot1.dat.gz [uniprot2.dat.gz ...] &gt; outFile
+<pre><code>java -jar PeptideEclipse.jar -in inFile -up uniprot1.dat.gz [uniprot2.dat.gz ...] &gt; outFile
 </code></pre>
 
 <ul>
@@ -61,7 +64,7 @@
 </ul><h3>
 <a name="output" class="anchor" href="#output"><span class="octicon octicon-link"></span></a>Output</h3>
 
-<p>For a <code>prot.xml</code> file input, PeptideTMM will generate a tab-separated file (open using Excel) with the following columns:</p>
+<p>For a <code>prot.xml</code> file input, PeptideEclipse will generate a tab-separated file (open using Excel) with the following columns:</p>
 
 <pre><code>group_number    protein-group number
 group_probability   protein-group probability
@@ -85,7 +88,7 @@ peptide_AA  length of peptide
 peptide_AA_transmem length of peptide's TM region(s)
 </code></pre>
 
-<p>For a <code>prot.xls</code> file input, PeptideTMM will create a copy of the input file with the following columns appended:</p>
+<p>For a <code>prot.xls</code> file input, PeptideEclipse will create a copy of the input file with the following columns appended:</p>
 
 <pre><code>peptide_AA  length of peptide
 peptide_AA_transmem length of peptide's TM region(s)
@@ -100,8 +103,8 @@ protein_AA_transmem_covered length of protein's TM region(s) covered by peptides
 <h3>
 <a name="dependencies" class="anchor" href="#dependencies"><span class="octicon octicon-link"></span></a>Dependencies</h3>
 
-<p>All dependencies are packed within the <code>PeptideTMM.jar</code> file. No external dependencies are needed!
-Internally, PeptideTMM depends on two libraries:</p>
+<p>All dependencies are packed within the <code>PeptideEclipse.jar</code> file. No external dependencies are needed!
+Internally, PeptideEclipse depends on two libraries:</p>
 
 <ul>
 <li>Apache Commons CLI: <a href="http://commons.apache.org/proper/commons-cli/">http://commons.apache.org/proper/commons-cli/</a>
@@ -111,20 +114,20 @@ Internally, PeptideTMM depends on two libraries:</p>
 </ul><h3>
 <a name="credits" class="anchor" href="#credits"><span class="octicon octicon-link"></span></a>Credits</h3>
 
-<p>PeptideTMM was developed by Ulrich Omasits, and will be published as part of a proteomics study.
+<p>PeptideEclipse was developed by Ulrich Omasits, and will be published as part of a proteomics study.
 Please cite xxx.</p>
 
 <h3>
 <a name="license" class="anchor" href="#license"><span class="octicon octicon-link"></span></a>License</h3>
 
-<p>PeptideTMM is licensed under a Creative Commons Attribution 3.0 Unported License.</p>
+<p>PeptideEclipse is licensed under a Creative Commons Attribution 3.0 Unported License.</p>
       </section>
     </div>
 
     <!-- FOOTER  -->
     <div id="footer_wrap" class="outer">
       <footer class="inner">
-        <p class="copyright">PeptideTMM maintained by <a href="https://github.com/ulo">ulo</a></p>
+        <p class="copyright">PeptideEclipse maintained by <a href="https://github.com/ulo">ulo</a></p>
         <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
       </footer>
     </div>
