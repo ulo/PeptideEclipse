@@ -28,12 +28,12 @@ import com.google.common.base.Splitter;
 import com.google.common.collect.Lists;
 
 /**
- * PeptideTMM matches proteomics peptide identifications to transmembrane regions as annotated in UniProt.
+ * PeptideEclipse matches proteomics peptide identifications to transmembrane regions as annotated in UniProt.
  * 
  * @author Ulrich Omasits
  * @date 22.07.2013
  */
-public class PeptideTMM {
+public class PeptideEclipse {
 	
 	final static Joiner tabJoiner = Joiner.on('\t').useForNull("");
 	
@@ -44,7 +44,7 @@ public class PeptideTMM {
 	}};
 	
 	public static void printUsageAndExit() {
-		new HelpFormatter().printHelp("java -jar "+PeptideTMM.class.getSimpleName()+".jar", "PeptideTransMembraneMapper by Ulrich Omasits", options, null, true);
+		new HelpFormatter().printHelp("java -jar "+PeptideEclipse.class.getSimpleName()+".jar", "PeptideTransMembraneMapper by Ulrich Omasits", options, null, true);
 		System.exit(0);
 	}
 	
