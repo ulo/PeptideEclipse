@@ -64,7 +64,7 @@ Internally, PeptideEclipse depends on two libraries:
 * Google Guava: http://code.google.com/p/guava-libraries/
 
 ### Credits
-PeptideEclipse was developed by Ulrich Omasits, and will be published as part of a proteomics study.
+PeptideEclipse was developed by Ulrich Omasits, and was be published as part of a proteomics study.
 Please cite [Waas et al. Anal Chem. 2014 Feb 4;86(3):1551-9](http://www.ncbi.nlm.nih.gov/pubmed/24392666).
 
 ### License
